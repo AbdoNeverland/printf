@@ -9,8 +9,6 @@ int _printf(const char *const format, ...)
 	int i = 0, nb_printed = 0;
 	va_list ap;
 
-	if (format == NULL)
-		return (-1);
 	va_start(ap, format);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
@@ -23,7 +21,7 @@ int _printf(const char *const format, ...)
 				case 'i':
 					print_int(va_arg(ap, int), &nb_printed);
 					break;
-				case 'f':
+				case 'b':
 					/*to complete*/
 					break;
 				case 'c':
@@ -46,5 +44,5 @@ int _printf(const char *const format, ...)
 		}
 	}
 	va_end(ap);
-	return (nb_printed);
+	return (format == NULL ? -1 : nb_printed);
 }
