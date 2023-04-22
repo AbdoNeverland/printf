@@ -33,8 +33,9 @@ int _printf(const char *const format, ...)
 					break;
 				default:
 					_putchar('%');
-					_putchar(format[i]);
-					nb_printed += 2;
+					if (format[i] != '%')
+						_putchar(format[i]), nb_printed++;
+					nb_printed++;
 			}
 		}
 		else
