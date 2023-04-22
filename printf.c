@@ -6,11 +6,11 @@
  */
 int _printf(const char *const format, ...)
 {
-	unsigned int i = 0, nb_printed;
+	int i = 0, nb_printed;
 	va_list ap;
 
 	va_start(ap, format);
-	for (i = 0; format && format[i] != '\0', i++)
+	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
