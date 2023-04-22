@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _putchar - print a char
- *@nc: char to print
+ *@c: char to print
  * Return: void
  */
 void _putchar(char c)
@@ -11,13 +11,15 @@ void _putchar(char c)
 /**
  * print_string - print a string
  *@str: the string to print
- *@nb_digit: increment number of char printed
+ *@nb_printed: increment number of char printed
  * Return: void
  */
 void print_string(char *str, int *nb_printed)
 {
 	int i = 0;
 
+	if (str == NULL)
+		str = "(null)";
 	while (str && str[i] != '\0')
 	{
 		_putchar(str[i]);
@@ -28,7 +30,7 @@ void print_string(char *str, int *nb_printed)
 /**
  * print_int - print an integer
  *@n: number
- *@nb_digit: increment number of char printed
+ *@nb_printed: increment number of char printed
  * Return: int
  */
 void print_int(long int n, int *nb_printed)
