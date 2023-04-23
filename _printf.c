@@ -11,13 +11,6 @@ void handle_conversion(const char *const format,
 {
 	switch (format[i])
 	{
-		case 'd':
-		case 'i':
-			print_int(va_arg(ap, int), nb_printed);
-			break;
-		case 'b':
-			/*to complete*/
-			break;
 		case 'c':
 			_putchar((va_arg(ap, int)));
 			(*nb_printed)++;
