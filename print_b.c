@@ -7,12 +7,6 @@
  */
 void print_b(long int n, int *nb_printed)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		(*nb_printed)++;
-		n *= -1;
-	}
 	if (n / 2 > 0)
 		print_b(n / 2, nb_printed);
 	_putchar('0' + n % 2);
