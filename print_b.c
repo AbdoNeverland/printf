@@ -5,7 +5,7 @@
  *@nb_printed: number of characters printed
  * Return: void
  */
-void print_b(long int n, int *nb_printed)
+void print_b(unsigned int n, int *nb_printed)
 {
 	if (n / 2 > 0)
 		print_b(n / 2, nb_printed);
