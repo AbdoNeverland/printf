@@ -18,6 +18,9 @@ void handle_conversion(const char *const format,
 		case 's':
 			print_string(va_arg(ap, char *), nb_printed);
 			break;
+		case 'd':
+		case 'i':
+			print_integer(va_arg(ap, int), nb_printed);
 		default:
 			_putchar('%');
 			if (format[i] != '%')
