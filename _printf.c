@@ -12,8 +12,10 @@ int _printf(const char *const format, ...)
 	va_start(ap, format);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				nb_printed = -1, break;
 			i++;
 			switch (format[i])
 			{
@@ -39,10 +41,8 @@ int _printf(const char *const format, ...)
 			}
 		}
 		else
-		{
-			_putchar(format[i]);
-			nb_printed++;
-		}
+			_putchar(format[i]), nb_printed++;
+
 	}
 	va_end(ap);
 	return (format == NULL ? -1 : nb_printed);
