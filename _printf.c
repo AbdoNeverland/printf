@@ -20,7 +20,7 @@ void handle_conversion(const char *const format,
 			break;
 		case 'd':
 		case 'i':
-			print_integer(va_arg(ap, int), nb_printed);
+			print_int(va_arg(ap, int), nb_printed);
 			break;
 		default:
 			_putchar('%');

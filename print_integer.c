@@ -1,24 +1,21 @@
 #include "main.h"
 /**
- * print_integer - prints an integer
+ * print_int - prints an integer
  * @n: integer to be printed
  * @nb_printed: the length of the passed string
  */
-void print_integer(int n, int *nb_printed)
+void print_int(long int n, int *nb_printed)
 {
-	int a;
-
 	if (n < 0)
 	{
 		_putchar('-');
-		(*nb_printed)++;
+		if (nb_printed)
+			(*nb_printed)++;
 		n *= -1;
 	}
-
-	if (n / 10 != 0)
-		print_integer(n / 10, nb_printed);
-
-	a = (n % 10) + '0';
-	_putchar(a);
-	(*nb_printed)++;
+	if (n > 9)
+		print_int(n / 10, nb_printed);
+	_putchar('0' + n % 10);
+	if (nb_printed)
+		(*nb_printed)++;
 }
