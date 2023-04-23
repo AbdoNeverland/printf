@@ -1,4 +1,4 @@
-#include<unistd.h>
+#include "main.h"
 /**
  * print_integer - prints an integer
  * @n: integer to be printed
@@ -7,12 +7,10 @@
 void print_integer(int n, int *nb_printed)
 {
 	int a;
-	char c;
 
 	if (n < 0)
 	{
-		c = '-';
-		write(1, &c, 1);
+		_putchar('-');
 		(*nb_printed)++;
 		n *= -1;
 	}
@@ -21,6 +19,6 @@ void print_integer(int n, int *nb_printed)
 		print_integer(n / 10, nb_printed);
 
 	a = (n % 10) + '0';
-	write(1, &a, 1);
+	_putchar(a);
 	(*nb_printed)++;
 }
