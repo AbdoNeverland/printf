@@ -7,5 +7,5 @@
 void _putchar(char c);
 void print_string(char *str, int *nb_printed);
 int _printf(const char *const format, ...);
-void print_integer(int, int);
+void print_integer(int n, int *nb_printed);
 #endif
