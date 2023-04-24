@@ -31,7 +31,7 @@ void print_p(void *var, int *nb_printed)
 		putchar('0');
 		putchar('x');
 		(*nb_printed) += 2;
-		print_x((long int)var, nb_printed);
+		print_x((unsigned long)var, nb_printed);
 	}
 	else
 	{
