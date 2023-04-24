@@ -12,5 +12,6 @@ void print_unsignedInt(unsigned int n, int *nb_printed)
 		print_unsignedInt(n / 10, nb_printed);
 	}
 	putchar(n % 10 + '0');
-	(*nb_printed)++;
+	if (nb_printed)
+		(*nb_printed)++;
 }
