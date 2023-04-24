@@ -7,9 +7,7 @@
  */
 void print_Lower_Hexa(unsigned int n, int *nb_printed)
 {
-char hex_digits[] = "0123456789abcdef";
-char hex_num[32];
-int num_digits = 0, i;
+int a = n % 16;
 
 if (n == 0)
 {
@@ -17,16 +15,19 @@ putchar('0');
 (*nb_printed)++;
 return;
 }
-
-while (n != 0)
+if (n > 0)
 {
-hex_num[num_digits++] = hex_digits[n % 16];
-n /= 16;
-}
-
-for (i = num_digits - 1; i >= 0; i--)
+if (a < 10)
 {
-putchar(hex_num[i]);
+print_Upper_Hexa(n / 16, nb_printed);
+_putchar(a + '0');
 (*nb_printed)++;
+}
+else
+{
+print_Upper_Hexa(n / 16, nb_printed);
+_putchar(a + '7' - 'A' + 'a');
+(*nb_printed)++;
+}
 }
 }

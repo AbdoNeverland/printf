@@ -7,20 +7,11 @@
  */
 void print_unsignedInt(unsigned int n, int *nb_printed)
 {
-unsigned int a = 4294967295;
-
-if (!n)
-{
-a +=  (n + 1);
-print_unsignedInt(a, nb_printed);
-}
-if (n / 10)
-{
-print_unsignedInt(n / 10, nb_printed);
-}
-_putchar(n % 10 + '0');
-if (nb_printed)
-{
-(*nb_printed)++;
-}
+	if (n >= 10)
+	{
+		print_unsignedInt(n / 10, nb_printed);
+	}
+	putchar(n % 10 + '0');
+	if (nb_printed)
+		(*nb_printed)++;
 }
