@@ -21,6 +21,9 @@ void handle_conversion(const char *const format,
 		case 's':
 			print_string(va_arg(ap, char *), nb_printed);
 			break;
+		case 'S':
+			print_S(va_arg(ap, char *), nb_printed);
+			break;
 		case 'd':
 		case 'i':
 			print_int(va_arg(ap, int), nb_printed);
