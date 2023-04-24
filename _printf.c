@@ -11,6 +11,9 @@ void handle_conversion(const char *const format,
 {
 	switch (format[i])
 	{
+		case 'p':
+			print_p(va_arg(ap, void *), nb_printed);
+			break;
 		case 'b':
 			print_b(va_arg(ap, int), nb_printed);
 			break;

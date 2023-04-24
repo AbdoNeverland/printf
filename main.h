@@ -16,4 +16,5 @@ void print_Lower_Hexa(unsigned int n, int *nb_printed);
 
 void print_b(unsigned int n, int *nb_printed);
 void print_S(char *str, int *nb_printed);
+void print_p(void *var, int *nb_printed);
 #endif
