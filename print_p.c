@@ -34,11 +34,6 @@ void print_p(void *var, int *nb_printed)
 		print_x((unsigned long)var, nb_printed);
 	}
 	else
-	{
-		for (i = 0; nil[i]; i++)
-		{
-			putchar(nil[i]);
-			(*nb_printed)++;
-		}
-	}
+		for (i = 0; nil[i] != '\0'; i++)
+			putchar(nil[i]), (*nb_printed)++;
 }
