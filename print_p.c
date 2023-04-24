@@ -7,12 +7,6 @@
  */
 void print_x(long int n, int *nb_printed)
 {
-	if (n < 0)
-	{
-		putchar('-');
-		(*nb_printed)++;
-		n *= -1;
-	}
 	if (n / 16 > 0)
 		print_x(n / 16, nb_printed);
 	if (n % 16 < 10)
