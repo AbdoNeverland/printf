@@ -29,7 +29,14 @@ void print_S(char *str, int *nb_printed)
 	int i = 0;
 
 	if (str == NULL)
-		str = "(null)";
+	{
+		_putchar('\\');
+		_putchar('x');
+		_putchar('0');
+		_putchar('0');
+		nb_printed += 4;
+		return;
+	}
 	while (str && str[i] != '\0')
 	{
 		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
