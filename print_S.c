@@ -34,7 +34,7 @@ void print_S(char *str, int *nb_printed)
 		_putchar('x');
 		_putchar('0');
 		_putchar('0');
-		nb_printed += 4;
+		*nb_printed += 4;
 		return;
 	}
 	while (str && str[i] != '\0')
