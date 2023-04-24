@@ -19,5 +19,8 @@ if (n / 10)
 print_unsignedInt(n / 10, nb_printed);
 }
 _putchar(n % 10 + '0');
+if (nb_printed)
+{
 (*nb_printed)++;
+}
 }
