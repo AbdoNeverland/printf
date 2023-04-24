@@ -5,7 +5,7 @@
  *@nb_printed: number of printed char
  * Return: void
  */
-void print_x(long int n, int *nb_printed)
+void print_x(unsigned long n, int *nb_printed)
 {
 	if (n / 16 > 0)
 		print_x(n / 16, nb_printed);
