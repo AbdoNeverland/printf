@@ -40,6 +40,7 @@ void print_S(char *str, int *nb_printed)
 			if (str[i] <= 15)
 				_putchar('0');
 			print_hex(str[i]);
+			*nb_printed += 3;
 		}
 		else
 			_putchar(str[i]);
