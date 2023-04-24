@@ -7,24 +7,12 @@
  */
 void print_octal(unsigned int n, int *nb_printed)
 {
-	int i, digits[32] = { 0 }, num_digits = 0;
-
-	if (n == 0)
+	if (n > 8)
 	{
-		putchar('0');
+		print_octal(n / 8, nb_printed);
+	}
+
+	_putchar((n % 8) + '0');
+	if (nb_printed)
 		(*nb_printed)++;
-		return;
-	}
-
-	while (n != 0)
-	{
-		digits[num_digits++] = n % 8;
-		n /= 8;
-	}
-
-	for (i = num_digits - 1; i >= 0; i--)
-	{
-		putchar(digits[i] + '0');
-		(*nb_printed)++;
-	}
 }
