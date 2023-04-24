@@ -22,6 +22,18 @@ void handle_conversion(const char *const format,
 		case 'i':
 			print_int(va_arg(ap, int), nb_printed);
 			break;
+		case 'u':
+			print_unsignedInt(va_arg(ap, int), nb_printed);
+			break;
+		case 'o':
+			print_octal(va_arg(ap, int), nb_printed);
+			break;
+		case 'x':
+		print_Lower_Hexa(va_arg(ap, int), nb_printed);
+			break;
+		case 'X':
+		print_Upper_Hexa(va_arg(ap, int), nb_printed);
+			break;
 		default:
 			_putchar('%');
 			if (format[i] != '%')
