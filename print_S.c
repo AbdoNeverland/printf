@@ -40,7 +40,7 @@ void print_S(char *str, int *nb_printed)
 			if (str[i] <= 15)
 				_putchar('0'), (*nb_printed)++;
 			print_hex(str[i]);
-			(*nb_printed)++;
+			(*nb_printed) += 2;
 		}
 		else
 			_putchar(str[i]);
