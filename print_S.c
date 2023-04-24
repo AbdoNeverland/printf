@@ -38,8 +38,9 @@ void print_S(char *str, int *nb_printed)
 			_putchar('x');
 			/*printf("\n%d %c\n", str[i] ,str[i]);*/
 			if (str[i] <= 15)
-				_putchar('0');
+				_putchar('0'), (*nb_printed)++;
 			print_hex(str[i]);
+			(*nb_printed)++;
 		}
 		else
 			_putchar(str[i]);
