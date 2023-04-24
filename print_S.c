@@ -46,6 +46,6 @@ void print_S(char *str, int *nb_printed)
 			_putchar(str[i]);
 		i++;
 	};
-	*nb_printed += i;
+	*nb_printed += i + 1;
 	_putchar('\n');
 }
