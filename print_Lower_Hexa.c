@@ -5,7 +5,7 @@
  * @format: string
  * @ii: iterator
  * @ap: va_list
- * @nb_printed: the length of the passed string
+ * @nb_printed: the length of the passed string.
  */
 void print_Lower_Hexa(__attribute__((unused)) const char *const format,
 __attribute__((unused))int ii, va_list ap, int *nb_printed)

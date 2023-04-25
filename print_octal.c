@@ -2,7 +2,7 @@
 
 /**
  * print_octal_recursive - prints an octal
- * @n: integer to be printed
+ * @n: int to be printed
  * @nb_printed: the length of the passed string
  */
 void print_octal_recursive(unsigned int n, int *nb_printed)

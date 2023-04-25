@@ -4,7 +4,7 @@
  * print_percent -  print  %
  *@c: char after %
  *@nb_printed: int
- * Return: void
+ * Return: void.
  */
 void print_percent(char c, int *nb_printed)
 {
