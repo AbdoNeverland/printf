@@ -16,15 +16,18 @@ void print_x(unsigned long n, int *nb_printed)
 	(*nb_printed)++;
 }
 /**
- * print_p - print a variable's adresse
- *@var: the variable
- *@nb_printed:number of printed character
- * Return: void
+ * print_p - prints an adresse
+ * @format: string
+ * @i: iterator
+ * @ap: va_list
+ * @nb_printed: the length of the passed string
  */
-void print_p(void *var, int *nb_printed)
+void print_p(__attribute__((unused)) const char *const format,
+__attribute__((unused))int i, va_list ap, int *nb_printed)
 {
 	char *nil = "(nil)";
-	int i;
+	int k;
+	void *var = va_arg(ap, void *);
 
 	if (var)
 	{
@@ -34,6 +37,6 @@ void print_p(void *var, int *nb_printed)
 		print_x((unsigned long)var, nb_printed);
 	}
 	else
-		for (i = 0; nil[i] != '\0'; i++)
-			putchar(nil[i]), (*nb_printed)++;
+		for (k = 0; nil[k] != '\0'; k++)
+			putchar(nil[k]), (*nb_printed)++;
 }

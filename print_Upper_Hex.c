@@ -2,14 +2,18 @@
 
 /**
  * print_Upper_Hexa - prints an upper hexadecimal
- * @n: integer to be printed
+ * @format: string
+ * @ii: iterator
+ * @ap: va_list
  * @nb_printed: the length of the passed string
  */
-void print_Upper_Hexa(unsigned int n, int *nb_printed)
+void print_Upper_Hexa(__attribute__((unused)) const char *const format,
+__attribute__((unused))int ii, va_list ap, int *nb_printed)
 {
 	char hex_digits[] = "0123456789ABCDEF";
 	char hex_num[32];
 	int num_digits = 0, i;
+	unsigned int n = va_arg(ap, int);
 
 	if (n == 0)
 	{

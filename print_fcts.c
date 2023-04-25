@@ -9,14 +9,30 @@ void _putchar(char c)
 	putchar(c);
 }
 /**
- * print_string - print a string
- *@str: the string to print
- *@nb_printed: increment number of char printed
- * Return: void
+ * print_c- prints a char
+ * @format: string
+ * @ii: iterator
+ * @ap: va_list
+ * @nb_printed: the length of the passed string
  */
-void print_string(char *str, int *nb_printed)
+void print_c(__attribute__((unused)) const char *const format,
+__attribute__((unused))int ii, va_list ap, int *nb_printed)
+{
+	_putchar((va_arg(ap, int)));
+		(*nb_printed)++;
+}
+/**
+ * print_string - prints a string
+ * @format: string
+ * @ii: iterator
+ * @ap: va_list
+ * @nb_printed: the length of the passed string
+ */
+void print_string(__attribute__((unused)) const char *const format,
+__attribute__((unused))int ii, va_list ap, int *nb_printed)
 {
 	int i = 0;
+	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
 		str = "(null)";
@@ -29,13 +45,17 @@ void print_string(char *str, int *nb_printed)
 }
 /**
  * print_rstring - print reversed string
- *@str: the string to print
- *@nb_printed: increment number of char printed
+ * @format: string
+ * @ii: iterator
+ * @ap: va_list
+ * @nb_printed: the length of the passed string
  * Return: void
  */
-void print_rstring(char *str, int *nb_printed)
+void print_rstring(__attribute__((unused)) const char *const format,
+__attribute__((unused))int ii, va_list ap, int *nb_printed)
 {
 	int i = 0;
+	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
 		str = "(null)";

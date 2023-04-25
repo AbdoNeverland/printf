@@ -20,13 +20,17 @@ void print_hex(long int n)
 }
 /**
  * print_S - print string with non printable characters
- *@str: the string to print
- *@nb_printed: increment number of char printed
+ * @format: string
+ * @ii: iterator
+ * @ap: va_list
+ * @nb_printed: the length of the passed string
  * Return: void
  */
-void print_S(char *str, int *nb_printed)
+void print_S(__attribute__((unused)) const char *const format,
+__attribute__((unused))int ii, va_list ap, int *nb_printed)
 {
 	int i = 0;
+	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
 		str = "(null)";
