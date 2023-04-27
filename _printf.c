@@ -28,7 +28,7 @@ int _printf(const char *const format, ...)
 		{'p', print_p}, {'s', print_string}, {'d', print_int}, {'i', print_int},
 		{'S', print_S}, {'b', print_b}, {'c', print_c}, {'u', print_unsignedInt},
 		{'o', print_octal}, {'x', print_Lower_Hexa}, {'X', print_Upper_Hexa},
-		{'r', print_rstring}};
+		{'r', print_rstring}, {'R', print_rot13}};
 	int i = 0, k, nb_printed = 0;
 	int nb_of_function = sizeof(AllSpeFun) / sizeof(spe_fun);
 

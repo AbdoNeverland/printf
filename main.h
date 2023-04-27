@@ -19,6 +19,8 @@ void _putchar(char c);
 void print_c(const char *const format, int i, va_list ap, int *nb_printed);
 void print_string(const char *const format,
 		int i, va_list ap, int *nb_printed);
+void print_rot13(const char *const format,
+		int i, va_list ap, int *nb_printed);
 void print_rstring(const char *const format,
 		int i, va_list ap, int *nb_printed);
 int _printf(const char *const format, ...);
